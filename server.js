@@ -15,8 +15,8 @@ server.use(bodyParser.json());
 var layoutServer = "https://layout-mfe-demo-dev.netlify.app",
   catalogServer = "https://catalog-mfe-demo-dev.netlify.app",
   cartServer = "https://cart-mfe-demo-dev.netlify.app",
-  reviewServer = "https://reviews-mfe-demo-dev.netlify.app";
-  userServer = "http://localhost:8084";
+  reviewServer = "https://reviews-mfe-demo-dev.netlify.app",
+  userServer = "https://login-mfe-demo-dev.netlify.app";
 
 function match(domain) {
   return proxy(domain, {
@@ -45,5 +45,5 @@ server.use("/", match(layoutServer));
 
 server.listen(port, (err) => {
   if (err) throw err;
-  console.log(`> Ready on http://localhost:3000`);
+  console.log(`> Ready on https://e-commerce-microfronend-63d7f9bae764.herokuapp.com/`);
 });
